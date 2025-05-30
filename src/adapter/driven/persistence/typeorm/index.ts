@@ -1,3 +1,4 @@
+import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { CategoryModel } from "./category/model"
 import {
@@ -5,23 +6,21 @@ import {
     DATABASE_PASSWORD,
     DATABASE_PORT,
     DATABASE_USER,
-    DATABASE_SCHEMA,
+    DATABASE,
 } from "../../../../env-variables"
 
-export const factoryDataSource = () => {
-    const dataSource = new DataSource({
-        type: "postgres",
-        host: DATABASE_HOST,
-        port: DATABASE_PORT,
-        username: DATABASE_USER,
-        password: DATABASE_PASSWORD,
-        database: DATABASE_SCHEMA,
-        synchronize: true,
-        logging: true,
-        entities: [CategoryModel],
-        subscribers: [],
-        migrations: [],
-    })
-    dataSource.initialize()
-    return dataSource
-}
+export default new DataSource({
+    type: "postgres",
+    host: DATABASE_HOST,
+    port: DATABASE_PORT,
+    username: DATABASE_USER,
+    password: DATABASE_PASSWORD,
+    database: DATABASE,
+    schema: "scaffold-schema",
+    synchronize: true,
+    logging: false,
+    entities: [CategoryModel],
+    subscribers: [],
+    migrations: ["database-tools/migrations/typeorm/*.ts"],
+    migrationsTableName: "version_info",
+})

@@ -1,4 +1,8 @@
 import { z } from "zod"
+import { config } from "dotenv"
+import { join } from "path"
+
+config({ path: join(__dirname, "/.env") })
 
 const envSchema = z
     .object({
@@ -6,8 +10,11 @@ const envSchema = z
         DATABASE_USER: z.string().default("root"),
         DATABASE_PASSWORD: z.string().default("postgres"),
         DATABASE_HOST: z.string().default("postgres"),
-        DATABASE_PORT: z.number().default(5432),
-        DATABASE_SCHEMA: z.string().default("fastfood-api-teste"),
+        DATABASE_PORT: z
+            .string()
+            .default("5432")
+            .transform((val) => Number(val)),
+        DATABASE: z.string().default("api-scaffold"),
     })
     .parse(process.env)
 
@@ -17,5 +24,5 @@ export const {
     DATABASE_PASSWORD,
     DATABASE_HOST,
     DATABASE_PORT,
-    DATABASE_SCHEMA
+    DATABASE,
 } = envSchema
