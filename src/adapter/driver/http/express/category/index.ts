@@ -10,8 +10,17 @@ const categoryRouter = Router()
 
 /**
  * @openapi
+ * tags:
+ *   - name: category
+ *     description: Operations about categories
+ */
+
+/**
+ * @openapi
  * /category:
  *   get:
+ *     tags:
+ *       - category
  *     summary: Get all categories
  *     responses:
  *       200:
@@ -23,6 +32,8 @@ categoryRouter.get("/category", runExpressEndpoint(getCategoryAll, "get"))
  * @openapi
  * /category/{id}:
  *   get:
+ *     tags:
+ *       - category
  *     summary: Get category by ID
  *     parameters:
  *        - name: id
@@ -42,6 +53,8 @@ categoryRouter.get("/category/:id", runExpressEndpoint(getCategoryById, "get"))
  * @openapi
  * /category:
  *   post:
+ *     tags:
+ *       - category
  *     summary: Create a new category
  *     requestBody:
  *       required: true
@@ -67,6 +80,8 @@ categoryRouter.post("/category", runExpressEndpoint(createCategory, "post"))
  * @openapi
  * /category/{id}:
  *   put:
+ *     tags:
+ *       - category
  *     summary: Update an existing category
  *     parameters:
  *        - name: id
@@ -99,6 +114,8 @@ categoryRouter.put("/category/:id", runExpressEndpoint(updateCategory, "put"))
  * @openapi
  * /category/{id}:
  *   delete:
+ *     tags:
+ *       - category
  *     summary: Delete a category
  *     parameters:
  *        - name: id

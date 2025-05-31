@@ -6,8 +6,8 @@ WORKDIR /
 ENV NODE_ENV=production
 
 COPY ./package.json ./yarn.lock /
-COPY ./database-tools /database-tools
-COPY ./dist /dist
+COPY ./dist/database-tools /database-tools
+COPY ./dist/src /dist
 COPY ./src/.env /dist/.env
 
 RUN yarn install --production --frozen-lockfile

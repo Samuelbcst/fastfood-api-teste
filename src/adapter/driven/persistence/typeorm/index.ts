@@ -1,6 +1,7 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { CategoryModel } from "./category/model"
+import { ProductModel } from "./product/model"
 import {
     DATABASE_HOST,
     DATABASE_PASSWORD,
@@ -8,6 +9,8 @@ import {
     DATABASE_USER,
     DATABASE,
 } from "../../../../env-variables"
+
+const isProduction = process.env.NODE_ENV === 'production';
 
 export default new DataSource({
     type: "postgres",
@@ -19,8 +22,8 @@ export default new DataSource({
     schema: "scaffold-schema",
     synchronize: true,
     logging: false,
-    entities: [CategoryModel],
+    entities: [CategoryModel, ProductModel],
     subscribers: [],
-    migrations: ["database-tools/migrations/typeorm/*.ts"],
+    migrations: [`database-tools/migrations/typeorm/*.${isProduction ? 'js' : 'ts'}`],
     migrationsTableName: "version_info",
 })

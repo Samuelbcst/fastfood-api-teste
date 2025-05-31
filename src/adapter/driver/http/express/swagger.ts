@@ -21,6 +21,8 @@ const options = {
     apis: [
         "src/adapter/driver/http/express/category/index.ts",
         "dist/adapter/driver/http/express/category/index.js",
+        "src/adapter/driver/http/express/product/index.ts",
+        "dist/adapter/driver/http/express/product/index.js",
     ],
 }
 
@@ -41,6 +43,19 @@ export { swaggerSpec, swaggerUi }
  *           type: string
  *         description:
  *           type: string
+ *     Product:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *         name:
+ *           type: string
+ *         description:
+ *           type: string
+ *         price:
+ *           type: number
+ *         categoryId:
+ *           type: integer
  *     DeleteCategory:
  *       type: object
  *       properties:
@@ -49,6 +64,14 @@ export { swaggerSpec, swaggerUi }
  *       required:
  *         - id
  *       description: Delete a category by id
+ *     DeleteProduct:
+ *       type: object
+ *       properties:
+ *         id:
+ *           type: integer
+ *       required:
+ *         - id
+ *       description: Delete a product by id
  */
 
 /**
