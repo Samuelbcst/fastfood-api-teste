@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest"
 import { Product } from "./product"
 
 describe("Product", () => {
-    it("should have id, name, price, categoryId, createdAt, updatedAt", () => {
+    it("should have id, name, price, categoryId, createdAt, updatedAt, active", () => {
         const now = new Date()
         const product: Product = {
             id: 1,
@@ -11,6 +11,7 @@ describe("Product", () => {
             categoryId: 2,
             createdAt: now,
             updatedAt: now,
+            active: true,
         }
         expect(product.id).toBe(1)
         expect(product.name).toBe("Book")
@@ -18,9 +19,10 @@ describe("Product", () => {
         expect(product.categoryId).toBe(2)
         expect(product.createdAt).toBe(now)
         expect(product.updatedAt).toBe(now)
+        expect(product.active).toBe(true)
     })
 
-    it("should allow optional description", () => {
+    it("should allow optional description and active", () => {
         const now = new Date()
         const product: Product = {
             id: 2,
@@ -31,5 +33,6 @@ describe("Product", () => {
             updatedAt: now,
         }
         expect(product.description).toBeUndefined()
+        expect(product.active).toBeUndefined()
     })
 })

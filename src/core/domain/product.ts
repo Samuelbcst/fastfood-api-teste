@@ -5,4 +5,5 @@ export interface Product extends BaseEntity {
     description?: string
     price: number
     categoryId: number
+    active?: boolean
 }

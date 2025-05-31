@@ -17,6 +17,14 @@ export const runExpressEndpoint = (
                 req.params,
                 req.body
             )
+            if (!success && error) {
+                const response: any = { message: error.message }
+                if ((error as any).details) {
+                    response.details = (error as any).details
+                }
+                res.status(error.code || 400).json(response)
+                return
+            }
             res.status(figureStatusCode(success, method, error)).json(result)
             return
         } catch (error: unknown) {

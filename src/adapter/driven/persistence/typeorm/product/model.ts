@@ -28,4 +28,7 @@ export class ProductModel extends BaseEntity implements Product {
 
     @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
     updatedAt: Date = new Date()
+
+    @Column({ nullable: true })
+    active?: boolean
 }

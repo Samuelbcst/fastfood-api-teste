@@ -2,6 +2,7 @@ import "reflect-metadata"
 import { DataSource } from "typeorm"
 import { CategoryModel } from "./category/model"
 import { ProductModel } from "./product/model"
+import { ClientModel } from "./client/model"
 import {
     DATABASE_HOST,
     DATABASE_PASSWORD,
@@ -22,7 +23,7 @@ export default new DataSource({
     schema: "scaffold-schema",
     synchronize: true,
     logging: false,
-    entities: [CategoryModel, ProductModel],
+    entities: [CategoryModel, ProductModel, ClientModel],
     subscribers: [],
     migrations: [`database-tools/migrations/typeorm/*.${isProduction ? 'js' : 'ts'}`],
     migrationsTableName: "version_info",

@@ -9,8 +9,8 @@ export class TypeOrmCreateProductRepository
 {
     constructor(private readonly repository: Repository<ProductModel>) {}
 
-    async create({ name, description, price, categoryId }: Omit<Product, keyof BaseEntity>) {
-        const product = ProductModel.create({ name, description, price, categoryId })
+    async create({ name, description, price, categoryId, active }: Omit<Product, keyof BaseEntity>) {
+        const product = ProductModel.create({ name, description, price, categoryId, active })
         await product.save()
         return product
     }

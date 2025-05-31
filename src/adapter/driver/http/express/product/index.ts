@@ -74,6 +74,8 @@ productRouter.get("/product/:id", runExpressEndpoint(getProductById, "get"))
  *               categoryId:
  *                 type: number
  *                 required: true
+ *               active:
+ *                 type: boolean
  *     responses:
  *       201:
  *         description: Product created.
@@ -110,6 +112,8 @@ productRouter.post("/product", runExpressEndpoint(createProduct, "post"))
  *                 type: number
  *               categoryId:
  *                 type: number
+ *               active:
+ *                 type: boolean
  *     responses:
  *       200:
  *         description: Product updated.

@@ -23,6 +23,8 @@ const options = {
         "dist/adapter/driver/http/express/category/index.js",
         "src/adapter/driver/http/express/product/index.ts",
         "dist/adapter/driver/http/express/product/index.js",
+        "src/adapter/driver/http/express/client/index.ts",
+        "dist/adapter/driver/http/express/client/index.js",
     ],
 }
 
@@ -56,43 +58,23 @@ export { swaggerSpec, swaggerUi }
  *           type: number
  *         categoryId:
  *           type: integer
- *     DeleteCategory:
+ *         active:
+ *           type: boolean
+ *     Client:
  *       type: object
  *       properties:
  *         id:
  *           type: integer
+ *         name:
+ *           type: string
+ *         email:
+ *           type: string
+ *         cpf:
+ *           type: string
+ *         description:
+ *           type: string
  *       required:
- *         - id
- *       description: Delete a category by id
- *     DeleteProduct:
- *       type: object
- *       properties:
- *         id:
- *           type: integer
- *       required:
- *         - id
- *       description: Delete a product by id
- */
-
-/**
- * @swagger
- * /category/{id}:
- *   delete:
- *     summary: Delete a category by id
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         schema:
- *           type: integer
- *         description: Category ID
- *     responses:
- *       200:
- *         description: Category deleted successfully
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/Category'
- *       404:
- *         description: Category not found
+ *         - name
+ *         - email
+ *         - cpf
  */

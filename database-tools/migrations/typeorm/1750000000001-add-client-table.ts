@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from "typeorm"
 
-export class AddProductTable1750000000000 implements MigrationInterface {
+export class AddClientTable1750000000001 implements MigrationInterface {
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
             new Table({
-                name: "product",
+                name: "client",
                 schema: "scaffold-schema",
                 columns: [
                     {
@@ -20,24 +20,14 @@ export class AddProductTable1750000000000 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
-                        name: "description",
+                        name: "email",
                         type: "varchar",
-                        isNullable: true,
-                    },
-                    {
-                        name: "price",
-                        type: "float",
                         isNullable: false,
                     },
                     {
-                        name: "categoryId",
-                        type: "int",
+                        name: "cpf",
+                        type: "varchar",
                         isNullable: false,
-                    },
-                    {
-                        name: "active",
-                        type: "boolean",
-                        isNullable: true,
                     },
                     {
                         name: "createdAt",
@@ -57,6 +47,6 @@ export class AddProductTable1750000000000 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("scaffold-schema.product")
+        await queryRunner.dropTable("scaffold-schema.client")
     }
 }
