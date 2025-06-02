@@ -3,6 +3,9 @@ import { DataSource } from "typeorm"
 import { CategoryModel } from "./category/model"
 import { ProductModel } from "./product/model"
 import { ClientModel } from "./client/model"
+import { OrderModel } from "./order/model"
+import { OrderItemModel } from "./order-item/model"
+import { PaymentModel } from "./payment/model"
 import {
     DATABASE_HOST,
     DATABASE_PASSWORD,
@@ -21,10 +24,11 @@ export default new DataSource({
     password: DATABASE_PASSWORD,
     database: DATABASE,
     schema: "scaffold-schema",
-    synchronize: true,
+    synchronize: false,
     logging: false,
-    entities: [CategoryModel, ProductModel, ClientModel],
+    entities: [CategoryModel, ProductModel, ClientModel, OrderModel, OrderItemModel, PaymentModel],
     subscribers: [],
     migrations: [`database-tools/migrations/typeorm/*.${isProduction ? 'js' : 'ts'}`],
+    // migrations: ["database-tools/migrations/typeorm/*.ts"],
     migrationsTableName: "version_info",
 })

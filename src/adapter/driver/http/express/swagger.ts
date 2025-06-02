@@ -25,6 +25,12 @@ const options = {
         "dist/adapter/driver/http/express/product/index.js",
         "src/adapter/driver/http/express/client/index.ts",
         "dist/adapter/driver/http/express/client/index.js",
+        "src/adapter/driver/http/express/order/index.ts",
+        "dist/adapter/driver/http/express/order/index.js",
+        "src/adapter/driver/http/express/order-item/index.ts",
+        "dist/adapter/driver/http/express/order-item/index.js",
+        "src/adapter/driver/http/express/payment/index.ts",
+        "dist/adapter/driver/http/express/payment/index.js",
     ],
 }
 
