@@ -1,7 +1,7 @@
 import { Repository } from "typeorm/repository/Repository"
 import { CreateCategoryRepository } from "../../../../../../core/application/port/category/create-category-repository"
 import { BaseEntity } from "../../../../../../core/domain/base-entity"
-import { Category } from "../../../../../../core/domain/category"
+import { Category } from "../../../../../../core/domain/category/category"
 import { CategoryModel } from "../model"
 
 export class TypeOrmCreateCategoryRepository

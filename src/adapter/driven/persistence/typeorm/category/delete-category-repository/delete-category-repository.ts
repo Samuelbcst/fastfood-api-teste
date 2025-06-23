@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Category } from "../../../../../../core/domain/category"
+import { Category } from "../../../../../../core/domain/category/category"
 import { CategoryModel } from "../model"
 import { DeleteCategoryRepository } from "../../../../../../core/application/port/category/delete-category-repository"
 

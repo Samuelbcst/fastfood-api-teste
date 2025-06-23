@@ -1,4 +1,4 @@
-import { Payment } from "../../../../domain/payment"
+import { Payment } from "../../../../domain/payment/payment"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 import { DeletePaymentRepository } from "../../../port/payment/delete-payment-repository"

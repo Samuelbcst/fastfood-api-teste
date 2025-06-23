@@ -3,7 +3,9 @@ import { FindProductByIdTypeORMRepository } from "./find-product-by-id-repositor
 import dataSource from "../../"
 
 export const makeFindProductByIdRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const productRepository = dataSource.getRepository(ProductModel)
     return new FindProductByIdTypeORMRepository(productRepository)
 }

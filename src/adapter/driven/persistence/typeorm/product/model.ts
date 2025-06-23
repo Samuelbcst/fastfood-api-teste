@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, JoinColumn } from "typeorm"
-import { Product } from "../../../../../core/domain/product"
+import { Product } from "../../../../../core/domain/product/product"
 import { CategoryModel } from "../category/model"
 
 @Entity("product")
@@ -7,16 +7,16 @@ export class ProductModel extends BaseEntity implements Product {
     @PrimaryGeneratedColumn()
     id: number = 0
 
-    @Column()
+    @Column({ type: "varchar" })
     name: string = ""
 
-    @Column({ nullable: true })
+    @Column({ type: "varchar", nullable: true })
     description?: string
 
-    @Column("float")
+    @Column({ type: "decimal", precision: 10, scale: 2 })
     price: number = 0
 
-    @Column()
+    @Column({ type: "int" })
     categoryId: number = 0
 
     @ManyToOne(() => CategoryModel, { onDelete: "RESTRICT", onUpdate: "CASCADE" })
@@ -29,6 +29,6 @@ export class ProductModel extends BaseEntity implements Product {
     @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })
     updatedAt: Date = new Date()
 
-    @Column({ nullable: true })
+    @Column({ type: "boolean", nullable: true })
     active?: boolean
 }

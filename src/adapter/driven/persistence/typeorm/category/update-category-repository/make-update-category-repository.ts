@@ -3,7 +3,9 @@ import { UpdateCategoryTypeORMRepository } from "./update-category-repository"
 import dataSource from "../../"
 
 export const makeUpdateCategoryRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const categoryRepository = dataSource.getRepository(CategoryModel)
     return new UpdateCategoryTypeORMRepository(categoryRepository)
 }

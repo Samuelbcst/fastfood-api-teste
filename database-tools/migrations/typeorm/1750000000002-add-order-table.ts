@@ -21,7 +21,9 @@ export class AddOrderTable1750000000002 implements MigrationInterface {
                     },
                     {
                         name: "totalAmount",
-                        type: "float",
+                        type: "decimal",
+                        precision: 10,
+                        scale: 2,
                         isNullable: false,
                     },
                     {

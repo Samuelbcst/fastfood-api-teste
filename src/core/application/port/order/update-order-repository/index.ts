@@ -1,4 +1,4 @@
-import { Order } from '../../../../domain/order'
+import { Order } from '../../../../domain/order/order'
 import { RepositoryBase } from "../../repository-base"
 
 export interface UpdateOrderRepository extends RepositoryBase<{

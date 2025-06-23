@@ -1,20 +1,20 @@
 import { BaseEntity } from "../../../../domain/base-entity"
-import { Category } from "../../../../domain/category"
+import { Category } from "../../../../domain/category/category"
 import { CreateCategoryRepository } from "../../../port/category/create-category-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 
 type CreateCategoryInput = Omit<Category, keyof BaseEntity>
 
-export class CreateCategoryUseCase implements UseCase<Category, void> {
+export class CreateCategoryUseCase implements UseCase<CreateCategoryInput, Category> {
     constructor(private createCategoryRepository: CreateCategoryRepository) {}
 
     async execute(input: CreateCategoryInput) {
         try {
-            await this.createCategoryRepository.create(input)
+            const created = await this.createCategoryRepository.create(input)
             return {
                 success: true,
-                result: null,
+                result: created,
             }
         } catch (error: unknown) {
             return {

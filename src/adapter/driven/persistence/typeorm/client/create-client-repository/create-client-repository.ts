@@ -1,7 +1,7 @@
 import { Repository } from "typeorm/repository/Repository"
 import { CreateClientRepository } from "../../../../../../core/application/port/client/create-client-repository"
 import { BaseEntity } from "../../../../../../core/domain/base-entity"
-import { Client } from "../../../../../../core/domain/client"
+import { Client } from "../../../../../../core/domain/client/client"
 import { ClientModel } from "../model"
 
 export class TypeOrmCreateClientRepository

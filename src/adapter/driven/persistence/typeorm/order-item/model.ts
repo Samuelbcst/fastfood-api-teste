@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne, JoinColumn } from "typeorm"
-import { OrderItem } from "../../../../../core/domain/order-item"
+import { OrderItem } from "../../../../../core/domain/order-item/order-item"
 import { OrderModel } from "../order/model"
 import { ProductModel } from "../product/model"
 
@@ -8,16 +8,16 @@ export class OrderItemModel extends BaseEntity implements OrderItem {
     @PrimaryGeneratedColumn()
     id: number = 0
 
-    @Column()
+    @Column({ type: "int" })
     orderId: number = 0
 
-    @Column()
+    @Column({ type: "int" })
     productId: number = 0
 
-    @Column()
+    @Column({ type: "varchar" })
     productName: string = ""
 
-    @Column("float")
+    @Column({type: "decimal", precision: 10, scale: 2 })
     unitPrice: number = 0
 
     @Column("int")

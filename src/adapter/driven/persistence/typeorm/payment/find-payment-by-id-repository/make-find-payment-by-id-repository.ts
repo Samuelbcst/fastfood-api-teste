@@ -3,7 +3,9 @@ import { FindPaymentByIdTypeORMRepository } from "./find-payment-by-id-repositor
 import dataSource from "../../"
 
 export const makeFindPaymentByIdRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const paymentRepository = dataSource.getRepository(PaymentModel)
     return new FindPaymentByIdTypeORMRepository(paymentRepository)
 }

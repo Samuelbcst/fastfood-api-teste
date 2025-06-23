@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Product } from "../../../../../../core/domain/product"
+import { Product } from "../../../../../../core/domain/product/product"
 import { ProductModel } from "../model"
 import { FindProductAllRepository } from "../../../../../../core/application/port/product/find-product-all-repository"
 

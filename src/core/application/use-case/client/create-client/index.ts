@@ -1,20 +1,20 @@
 import { BaseEntity } from "../../../../domain/base-entity"
-import { Client } from "../../../../domain/client"
+import { Client } from "../../../../domain/client/client"
 import { CreateClientRepository } from "../../../port/client/create-client-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 
 type CreateClientInput = Omit<Client, keyof BaseEntity>
 
-export class CreateClientUseCase implements UseCase<Client, void> {
+export class CreateClientUseCase implements UseCase<CreateClientInput, Client> {
     constructor(private createClientRepository: CreateClientRepository) {}
 
     async execute(input: CreateClientInput) {
         try {
-            await this.createClientRepository.create(input)
+            const client = await this.createClientRepository.create(input)
             return {
                 success: true,
-                result: null,
+                result: client,
             }
         } catch (error: unknown) {
             return {

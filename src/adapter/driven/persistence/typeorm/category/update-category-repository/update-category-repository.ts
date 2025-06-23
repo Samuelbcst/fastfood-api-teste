@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Category } from "../../../../../../core/domain/category"
+import { Category } from "../../../../../../core/domain/category/category"
 import { CategoryModel } from "../model"
 import { UpdateCategoryRepository } from "../../../../../../core/application/port/category/update-category-repository"
 

@@ -1,5 +1,5 @@
 import { FindCategoryAllRepository } from "../../../port/category/find-category-all-repository"
-import { Category } from "../../../../domain/category"
+import { Category } from "../../../../domain/category/category"
 import { UseCase } from "../../base-use-case"
 
 export class FindCategoryAllUseCase implements UseCase<void, Category[]> {

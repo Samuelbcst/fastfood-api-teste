@@ -1,4 +1,4 @@
-import { Order } from "../../../../domain/order"
+import { Order } from "../../../../domain/order/order"
 import { BaseEntity } from "../../../../domain/base-entity"
 
 export interface CreateOrderRepository {

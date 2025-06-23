@@ -1,4 +1,4 @@
-import { Product } from "../../../../domain/product"
+import { Product } from "../../../../domain/product/product"
 import { UpdateProductRepository } from "../../../port/product/update-product-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

@@ -1,18 +1,18 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm"
-import { Client } from "../../../../../core/domain/client"
+import { Client } from "../../../../../core/domain/client/client"
 
 @Entity("client")
 export class ClientModel extends BaseEntity implements Client {
     @PrimaryGeneratedColumn()
     id: number = 0
 
-    @Column()
+    @Column({ type: "varchar" })
     name: string = ""
 
-    @Column()
+    @Column({ type: "varchar" })
     email: string = ""
 
-    @Column()
+    @Column({ type: "varchar" })
     cpf: string = ""
 
     @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })

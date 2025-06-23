@@ -3,7 +3,9 @@ import { DeleteOrderItemTypeORMRepository } from "./delete-order-item-repository
 import dataSource from "../../"
 
 export const makeDeleteOrderItemRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const orderItemRepository = dataSource.getRepository(OrderItemModel)
     return new DeleteOrderItemTypeORMRepository(orderItemRepository)
 }

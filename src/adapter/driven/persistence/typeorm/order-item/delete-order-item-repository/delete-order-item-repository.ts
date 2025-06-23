@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { OrderItem } from "../../../../../../core/domain/order-item"
+import { OrderItem } from "../../../../../../core/domain/order-item/order-item"
 import { OrderItemModel } from "../model"
 import { DeleteOrderItemRepository } from "../../../../../../core/application/port/order-item/delete-order-item-repository"
 

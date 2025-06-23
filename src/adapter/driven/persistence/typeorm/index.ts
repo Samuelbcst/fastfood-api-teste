@@ -14,8 +14,6 @@ import {
     DATABASE,
 } from "../../../../env-variables"
 
-const isProduction = process.env.NODE_ENV === 'production';
-
 export default new DataSource({
     type: "postgres",
     host: DATABASE_HOST,
@@ -27,8 +25,5 @@ export default new DataSource({
     synchronize: false,
     logging: false,
     entities: [CategoryModel, ProductModel, ClientModel, OrderModel, OrderItemModel, PaymentModel],
-    subscribers: [],
-    migrations: [`database-tools/migrations/typeorm/*.${isProduction ? 'js' : 'ts'}`],
-    // migrations: ["database-tools/migrations/typeorm/*.ts"],
     migrationsTableName: "version_info",
 })

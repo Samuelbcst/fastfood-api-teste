@@ -31,7 +31,9 @@ export class AddOrderItemTable1750000000003 implements MigrationInterface {
                     },
                     {
                         name: "unitPrice",
-                        type: "float",
+                        type: "decimal",
+                        precision: 10,
+                        scale: 2,
                         isNullable: false,
                     },
                     {

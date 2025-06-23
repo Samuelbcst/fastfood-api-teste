@@ -1,5 +1,5 @@
 import { FindOrderAllRepository } from '../../../port/order/find-order-all-repository'
-import { Order } from '../../../../domain/order'
+import { Order } from '../../../../domain/order/order'
 import { UseCase } from '../../base-use-case'
 import { CustomError } from '../../custom-error'
 

@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToMany } from "typeorm"
-import { Order, OrderStatus } from "../../../../../core/domain/order"
+import { Order, OrderStatus } from "../../../../../core/domain/order/order"
 import { OrderItemModel } from "../order-item/model"
 
 @Entity("order")
@@ -28,6 +28,6 @@ export class OrderModel extends BaseEntity implements Order {
     @Column({ type: "decimal", precision: 10, scale: 2 })
     totalAmount: number = 0
 
-    @Column({ nullable: true })
+    @Column({ type: "varchar", nullable: true })
     pickupCode?: string
 }

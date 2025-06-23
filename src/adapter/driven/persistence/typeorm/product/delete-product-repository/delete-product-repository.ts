@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Product } from "../../../../../../core/domain/product"
+import { Product } from "../../../../../../core/domain/product/product"
 import { ProductModel } from "../model"
 import { DeleteProductRepository } from "../../../../../../core/application/port/product/delete-product-repository"
 

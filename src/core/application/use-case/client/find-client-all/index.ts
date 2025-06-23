@@ -1,5 +1,5 @@
 import { FindClientAllRepository } from "../../../port/client/find-client-all-repository"
-import { Client } from "../../../../domain/client"
+import { Client } from "../../../../domain/client/client"
 import { UseCase } from "../../base-use-case"
 
 export class FindClientAllUseCase implements UseCase<void, Client[]> {

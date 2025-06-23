@@ -1,20 +1,20 @@
 import { BaseEntity } from "../../../../domain/base-entity"
-import { Product } from "../../../../domain/product"
+import { Product } from "../../../../domain/product/product"
 import { CreateProductRepository } from "../../../port/product/create-product-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 
 type CreateProductInput = Omit<Product, keyof BaseEntity>
 
-export class CreateProductUseCase implements UseCase<Product, void> {
+export class CreateProductUseCase implements UseCase<CreateProductInput, Product> {
     constructor(private createProductRepository: CreateProductRepository) {}
 
     async execute(input: CreateProductInput) {
         try {
-            await this.createProductRepository.create(input)
+            const created = await this.createProductRepository.create(input)
             return {
                 success: true,
-                result: null,
+                result: created,
             }
         } catch (error: unknown) {
             return {

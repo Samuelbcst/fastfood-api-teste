@@ -1,4 +1,4 @@
-import { Client } from "../../../../domain/client"
+import { Client } from "../../../../domain/client/client"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 import { DeleteClientRepository } from "../../../port/client/delete-client-repository"

@@ -1,4 +1,4 @@
-import { Category } from "../../../../../core/domain/category"
+import { Category } from "../../../../domain/category/category"
 import { BaseEntity } from "../../../../domain/base-entity"
 
 export interface CreateCategoryRepository {

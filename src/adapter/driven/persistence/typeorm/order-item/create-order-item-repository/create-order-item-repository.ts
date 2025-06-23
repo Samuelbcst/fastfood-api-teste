@@ -1,7 +1,7 @@
 import { Repository } from 'typeorm/repository/Repository'
 import { CreateOrderItemRepository } from '../../../../../../core/application/port/order-item/create-order-item-repository'
 import { BaseEntity } from '../../../../../../core/domain/base-entity'
-import { OrderItem } from '../../../../../../core/domain/order-item'
+import { OrderItem } from '../../../../../../core/domain/order-item/order-item'
 import { OrderItemModel } from '../model'
 
 export class TypeOrmCreateOrderItemRepository implements CreateOrderItemRepository {

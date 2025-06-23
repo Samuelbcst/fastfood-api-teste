@@ -1,15 +1,15 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity } from "typeorm"
-import { Category } from "../../../../../core/domain/category"
+import { Category } from "../../../../../core/domain/category/category"
 
 @Entity("category")
 export class CategoryModel extends BaseEntity implements Category {
     @PrimaryGeneratedColumn()
     id: number = 0
 
-    @Column()
+    @Column({ type: "varchar" })
     name: string = ""
 
-    @Column({ nullable: true })
+    @Column({ type: "varchar", nullable: true })
     description?: string
 
     @Column({ type: "timestamp", default: () => "CURRENT_TIMESTAMP" })

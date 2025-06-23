@@ -1,6 +1,6 @@
 import { Repository } from "typeorm"
 import { FindOrderItemAllRepository } from '../../../../../../core/application/port/order-item/find-order-item-all-repository'
-import { OrderItem } from '../../../../../../core/domain/order-item'
+import { OrderItem } from '../../../../../../core/domain/order-item/order-item'
 import { OrderItemModel } from '../model'
 
 export class FindOrderItemAllTypeORMRepository implements FindOrderItemAllRepository {

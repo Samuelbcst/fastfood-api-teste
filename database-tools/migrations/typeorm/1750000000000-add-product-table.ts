@@ -26,7 +26,9 @@ export class AddProductTable1750000000000 implements MigrationInterface {
                     },
                     {
                         name: "price",
-                        type: "float",
+                        type: "decimal",
+                        precision: 10,
+                        scale: 2,
                         isNullable: false,
                     },
                     {

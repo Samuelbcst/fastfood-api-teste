@@ -1,5 +1,5 @@
 import { FindOrderItemAllRepository } from "../../../port/order-item/find-order-item-all-repository"
-import { OrderItem } from "../../../../domain/order-item"
+import { OrderItem } from "../../../../domain/order-item/order-item"
 import { UseCase } from "../../base-use-case"
 
 export class FindOrderItemAllUseCase implements UseCase<void, OrderItem[]> {

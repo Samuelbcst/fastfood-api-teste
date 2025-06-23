@@ -1,5 +1,5 @@
 import { FindProductAllRepository } from "../../../port/product/find-product-all-repository"
-import { Product } from "../../../../domain/product"
+import { Product } from "../../../../domain/product/product"
 import { UseCase } from "../../base-use-case"
 
 export class FindProductAllUseCase implements UseCase<void, Product[]> {

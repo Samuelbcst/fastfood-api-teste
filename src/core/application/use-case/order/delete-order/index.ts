@@ -1,4 +1,4 @@
-import { Order } from "../../../../domain/order"
+import { Order } from "../../../../domain/order/order"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 import { DeleteOrderRepository } from "../../../port/order/delete-order-repository"

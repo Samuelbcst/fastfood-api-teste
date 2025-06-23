@@ -1,4 +1,4 @@
-import { Client } from "../../../../domain/client"
+import { Client } from "../../../../domain/client/client"
 import { FindClientByIdRepository } from "../../../port/client/find-client-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

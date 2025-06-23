@@ -1,5 +1,5 @@
 import { FindPaymentAllRepository } from "../../../port/payment/find-payment-all-repository"
-import { Payment } from "../../../../domain/payment"
+import { Payment } from "../../../../domain/payment/payment"
 import { UseCase } from "../../base-use-case"
 
 export class FindPaymentAllUseCase implements UseCase<void, Payment[]> {

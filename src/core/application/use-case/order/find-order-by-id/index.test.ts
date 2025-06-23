@@ -2,13 +2,13 @@ import { describe, it, expect, vi } from "vitest"
 import { FindOrderByIdUseCase } from "./index"
 
 const mockRepository = {
-    findById: vi.fn(),
+    execute: vi.fn(),
     finish: vi.fn(),
 }
 
 describe("FindOrderByIdUseCase", () => {
     it("should return success on find", async () => {
-        mockRepository.findById.mockResolvedValueOnce({})
+        mockRepository.execute.mockResolvedValueOnce({})
         const useCase = new FindOrderByIdUseCase(mockRepository as any)
         const result = await useCase.execute({ id: 1 })
         expect(result.success).toBe(true)
@@ -16,7 +16,7 @@ describe("FindOrderByIdUseCase", () => {
     })
 
     it("should return error on not found", async () => {
-        mockRepository.findById.mockResolvedValueOnce(null)
+        mockRepository.execute.mockResolvedValueOnce(null)
         const useCase = new FindOrderByIdUseCase(mockRepository as any)
         const result = await useCase.execute({ id: 1 })
         expect(result.success).toBe(false)
@@ -25,7 +25,7 @@ describe("FindOrderByIdUseCase", () => {
     })
 
     it("should return error on failure", async () => {
-        mockRepository.findById.mockRejectedValueOnce(new Error("fail"))
+        mockRepository.execute.mockRejectedValueOnce(new Error("fail"))
         const useCase = new FindOrderByIdUseCase(mockRepository as any)
         const result = await useCase.execute({ id: 1 })
         expect(result.success).toBe(false)

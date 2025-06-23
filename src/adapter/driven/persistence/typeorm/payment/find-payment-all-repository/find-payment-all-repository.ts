@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Payment } from "../../../../../../core/domain/payment"
+import { Payment } from "../../../../../../core/domain/payment/payment"
 import { PaymentModel } from "../model"
 import { FindPaymentAllRepository } from "../../../../../../core/application/port/payment/find-payment-all-repository"
 

@@ -3,7 +3,9 @@ import { FindOrderItemAllTypeORMRepository } from "./find-order-item-all-reposit
 import dataSource from "../.."
 
 export const makeFindOrderItemAllRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const orderItemRepository = dataSource.getRepository(OrderItemModel)
     return new FindOrderItemAllTypeORMRepository(orderItemRepository)
 }

@@ -1,4 +1,4 @@
-import { OrderItem } from "../../../../domain/order-item"
+import { OrderItem } from "../../../../domain/order-item/order-item"
 import { FindOrderItemByIdRepository } from "../../../port/order-item/find-order-item-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

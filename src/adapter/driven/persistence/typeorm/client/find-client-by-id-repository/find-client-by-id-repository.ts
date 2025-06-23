@@ -1,5 +1,5 @@
 import { Repository } from "typeorm"
-import { Client } from "../../../../../../core/domain/client"
+import { Client } from "../../../../../../core/domain/client/client"
 import { ClientModel } from "../model"
 import { FindClientByIdRepository } from "../../../../../../core/application/port/client/find-client-by-id-repository"
 

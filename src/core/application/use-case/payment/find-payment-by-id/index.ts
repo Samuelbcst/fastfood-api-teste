@@ -1,4 +1,4 @@
-import { Payment } from "../../../../domain/payment"
+import { Payment } from "../../../../domain/payment/payment"
 import { FindPaymentByIdRepository } from "../../../port/payment/find-payment-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

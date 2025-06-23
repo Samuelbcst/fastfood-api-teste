@@ -1,7 +1,7 @@
 import { Repository } from "typeorm/repository/Repository"
 import { CreateProductRepository } from "../../../../../../core/application/port/product/create-product-repository"
 import { BaseEntity } from "../../../../../../core/domain/base-entity"
-import { Product } from "../../../../../../core/domain/product"
+import { Product } from "../../../../../../core/domain/product/product"
 import { ProductModel } from "../model"
 
 export class TypeOrmCreateProductRepository

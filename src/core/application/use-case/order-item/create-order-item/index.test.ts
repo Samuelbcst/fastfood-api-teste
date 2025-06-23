@@ -1,26 +1,42 @@
-import { describe, it, expect, vi } from "vitest"
+import { describe, it, expect, vi, beforeEach } from "vitest"
 import { CreateOrderItemUseCase } from "./index"
 
-const mockRepository = {
-    create: vi.fn(),
-    finish: vi.fn(),
-}
+const input = { orderId: 1, productId: 2, productName: "prod", unitPrice: 10, quantity: 2 }
+const orderItem = { id: 1, ...input, createdAt: new Date(), updatedAt: new Date() }
+
+let repository: any // Use the correct type if available
+let useCase: CreateOrderItemUseCase
+
+beforeEach(() => {
+    repository = {
+        create: vi.fn().mockResolvedValue(orderItem),
+        finish: vi.fn().mockResolvedValue(undefined),
+    }
+    useCase = new CreateOrderItemUseCase(repository)
+})
 
 describe("CreateOrderItemUseCase", () => {
-    it("should return success on create", async () => {
-        mockRepository.create.mockResolvedValueOnce({})
-        const useCase = new CreateOrderItemUseCase(mockRepository as any)
-        const result = await useCase.execute({ orderId: 1, productId: 2, productName: "prod", unitPrice: 10, quantity: 2 })
+    it("should return success true when order item is created", async () => {
+        const result = await useCase.execute(input)
         expect(result.success).toBe(true)
-        expect(result.result).toBeNull()
+        expect(result.result).toEqual(orderItem)
+        expect(repository.create).toHaveBeenCalledWith(input)
     })
 
-    it("should return error on failure", async () => {
-        mockRepository.create.mockRejectedValueOnce(new Error("fail"))
-        const useCase = new CreateOrderItemUseCase(mockRepository as any)
-        const result = await useCase.execute({ orderId: 1, productId: 2, productName: "prod", unitPrice: 10, quantity: 2 })
+    it("should return success false and error on failure", async () => {
+        const errorMsg = "fail"
+        repository.create = vi.fn().mockRejectedValue(new Error(errorMsg))
+        useCase = new CreateOrderItemUseCase(repository)
+        const result = await useCase.execute(input)
         expect(result.success).toBe(false)
         expect(result.result).toBeNull()
         expect(result.error).toBeDefined()
+        // Optionally check error message:
+        // expect(result.error?.message).toBe(errorMsg)
+    })
+
+    it("should call finish on repository when onFinish is called", async () => {
+        await useCase.onFinish()
+        expect(repository.finish).toHaveBeenCalled()
     })
 })

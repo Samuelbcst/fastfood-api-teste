@@ -3,7 +3,9 @@ import { FindClientByIdTypeORMRepository } from "./find-client-by-id-repository"
 import dataSource from "../../"
 
 export const makeFindClientByIdRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const clientRepository = dataSource.getRepository(ClientModel)
     return new FindClientByIdTypeORMRepository(clientRepository)
 }

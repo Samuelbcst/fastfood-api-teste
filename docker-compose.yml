@@ -31,6 +31,10 @@ services:
             HOST_PORT: 3000
         ports:
             - "3000:3000"
+        volumes:
+            - ./dist/database-tools/index.js:/database-tools/index.js:ro
+            - ./database-tools/migrations/typeorm:/database-tools/migrations/typeorm:ro
+            - ./dist/database-tools/env-variables.js:/database-tools/env-variables.js:ro
 
 volumes:
     pgdata:

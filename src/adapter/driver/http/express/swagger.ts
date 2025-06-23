@@ -19,18 +19,18 @@ const swaggerDefinition = {
 const options = {
     swaggerDefinition,
     apis: [
-        "src/adapter/driver/http/express/category/index.ts",
-        "dist/adapter/driver/http/express/category/index.js",
-        "src/adapter/driver/http/express/product/index.ts",
-        "dist/adapter/driver/http/express/product/index.js",
-        "src/adapter/driver/http/express/client/index.ts",
-        "dist/adapter/driver/http/express/client/index.js",
-        "src/adapter/driver/http/express/order/index.ts",
-        "dist/adapter/driver/http/express/order/index.js",
-        "src/adapter/driver/http/express/order-item/index.ts",
-        "dist/adapter/driver/http/express/order-item/index.js",
-        "src/adapter/driver/http/express/payment/index.ts",
-        "dist/adapter/driver/http/express/payment/index.js",
+        "src/adapter/driver/http/express/categories/index.ts",
+        "dist/adapter/driver/http/express/categories/index.js",
+        "src/adapter/driver/http/express/products/index.ts",
+        "dist/adapter/driver/http/express/products/index.js",
+        "src/adapter/driver/http/express/clients/index.ts",
+        "dist/adapter/driver/http/express/clients/index.js",
+        "src/adapter/driver/http/express/orders/index.ts",
+        "dist/adapter/driver/http/express/orders/index.js",
+        "src/adapter/driver/http/express/order-items/index.ts",
+        "dist/adapter/driver/http/express/order-items/index.js",
+        "src/adapter/driver/http/express/payments/index.ts",
+        "dist/adapter/driver/http/express/payments/index.js",
     ],
 }
 
@@ -83,4 +83,46 @@ export { swaggerSpec, swaggerUi }
  *         - name
  *         - email
  *         - cpf
+ * /client/cpf/{cpf}:
+ *   get:
+ *     tags:
+ *       - client
+ *     summary: Get client by CPF
+ *     parameters:
+ *        - name: cpf
+ *          in: path
+ *          required: true
+ *          schema:
+ *              type: string
+ *     responses:
+ *          200:
+ *              description: A client object.
+ *              content:
+ *                application/json:
+ *                  schema:
+ *                    $ref: '#/components/schemas/Client'
+ *          404:
+ *              description: Client not found.
+ * /product/category/{categoryId}:
+ *   get:
+ *     tags:
+ *       - product
+ *     summary: Get products by category
+ *     parameters:
+ *        - name: categoryId
+ *          in: path
+ *          required: true
+ *          schema:
+ *              type: number
+ *     responses:
+ *          200:
+ *              description: A list of products in the category.
+ *              content:
+ *                application/json:
+ *                  schema:
+ *                    type: array
+ *                    items:
+ *                      $ref: '#/components/schemas/Product'
+ *          404:
+ *              description: No products found for this category.
  */

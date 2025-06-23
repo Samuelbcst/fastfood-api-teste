@@ -1,4 +1,4 @@
-import { Product } from "../../../../domain/product"
+import { Product } from "../../../../domain/product/product"
 import { FindProductByIdRepository } from "../../../port/product/find-product-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

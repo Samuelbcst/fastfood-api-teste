@@ -1,18 +1,18 @@
 import { Router } from "express"
-import categoryRouter from "./category"
-import productRouter from "./product"
-import clientRouter from "./client"
-import orderRouter from "./order"
-import orderItemRouter from "./order-item"
-import paymentRouter from "./payment"
+import categoryRouter from "./categories"
+import productRouter from "./products"
+import clientRouter from "./clients"
+import orderRouter from "./orders"
+import orderItemRouter from "./order-items"
+import paymentRouter from "./payments"
 
 const routes = Router()
 
-routes.use("/v1", categoryRouter)
-routes.use("/v1", productRouter)
-routes.use("/v1", clientRouter)
-routes.use("/v1", orderRouter)
-routes.use("/v1", orderItemRouter)
-routes.use("/v1", paymentRouter)
+routes.use("/v1/categories", categoryRouter)
+routes.use("/v1/products", productRouter)
+routes.use("/v1/clients", clientRouter)
+routes.use("/v1/orders", orderRouter)
+routes.use("/v1/order-items", orderItemRouter)
+routes.use("/v1/payments", paymentRouter)
 
 export default routes

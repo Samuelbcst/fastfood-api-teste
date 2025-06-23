@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, BaseEntity, OneToOne, JoinColumn } from "typeorm"
-import { Payment, PaymentStatus } from "../../../../../core/domain/payment"
+import { Payment, PaymentStatus } from "../../../../../core/domain/payment/payment"
 import { OrderModel } from "../order/model"
 
 @Entity("payment")
@@ -7,8 +7,11 @@ export class PaymentModel extends BaseEntity implements Payment {
     @PrimaryGeneratedColumn()
     id: number = 0
 
-    @Column()
+    @Column({ type: "int" })
     orderId: number = 0
+
+    @Column({ type: "decimal", precision: 10, scale: 2 })
+    amount: number = 0
 
     @OneToOne(() => OrderModel)
     @JoinColumn({ name: "orderId" })

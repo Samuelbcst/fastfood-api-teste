@@ -20,6 +20,13 @@ export class AddPaymentTable1750000000004 implements MigrationInterface {
                         isNullable: false,
                     },
                     {
+                        name: "amount",
+                        type: "decimal",
+                        precision: 10,
+                        scale: 2,
+                        isNullable: false,
+                    },
+                    {
                         name: "paymentStatus",
                         type: "varchar",
                         length: "16",

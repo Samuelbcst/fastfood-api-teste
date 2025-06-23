@@ -1,4 +1,4 @@
-import { Product } from "../../../../../core/domain/product"
+import { Product } from "../../../../domain/product/product"
 import { BaseEntity } from "../../../../domain/base-entity"
 
 export interface CreateProductRepository {

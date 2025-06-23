@@ -1,20 +1,20 @@
 import { BaseEntity } from "../../../../domain/base-entity"
-import { OrderItem } from "../../../../domain/order-item"
+import { OrderItem } from "../../../../domain/order-item/order-item"
 import { CreateOrderItemRepository } from "../../../port/order-item/create-order-item-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 
 type CreateOrderItemInput = Omit<OrderItem, keyof BaseEntity>
 
-export class CreateOrderItemUseCase implements UseCase<OrderItem, void> {
+export class CreateOrderItemUseCase implements UseCase<CreateOrderItemInput, OrderItem> {
     constructor(private createOrderItemRepository: CreateOrderItemRepository) {}
 
     async execute(input: CreateOrderItemInput) {
         try {
-            await this.createOrderItemRepository.create(input)
+            const created = await this.createOrderItemRepository.create(input)
             return {
                 success: true,
-                result: null,
+                result: created,
             }
         } catch (error: unknown) {
             return {

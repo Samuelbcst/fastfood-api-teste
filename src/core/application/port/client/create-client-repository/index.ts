@@ -1,4 +1,4 @@
-import { Client } from "../../../../../core/domain/client"
+import { Client } from "../../../../../core/domain/client/client"
 import { BaseEntity } from "../../../../domain/base-entity"
 
 export interface CreateClientRepository {

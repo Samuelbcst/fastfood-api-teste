@@ -3,7 +3,9 @@ import { DeleteProductTypeORMRepository } from "./delete-product-repository"
 import dataSource from "../../"
 
 export const makeDeleteProductRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const productRepository = dataSource.getRepository(ProductModel)
     return new DeleteProductTypeORMRepository(productRepository)
 }

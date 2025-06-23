@@ -27,6 +27,14 @@ This project is a backend system for a fast-food self-service kiosk, designed to
 
 ---
 
+## 📝 Event Storming & DDD
+
+- [ ] Add Event Storming diagrams for:
+  - Order and payment flow
+  - Preparation and delivery flow
+
+---
+
 ## 🧑‍💻 Getting Started
 
 ### Prerequisites
@@ -41,7 +49,7 @@ yarn compose
 ```
 
 - The API will be available at `http://localhost:3000`
-- Swagger UI: `http://localhost:3000/api-docs`
+- Swagger UI: `http://localhost:3000/swagger`
 
 ### Environment Variables
 

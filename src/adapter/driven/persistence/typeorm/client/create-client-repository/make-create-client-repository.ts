@@ -3,7 +3,9 @@ import { TypeOrmCreateClientRepository } from "./create-client-repository"
 import dataSource from "../../"
 
 export const makeCreateClientRepository = async () => {
-    await dataSource.initialize()
-    const clientRepository = dataSource.getRepository(ClientModel)
-    return new TypeOrmCreateClientRepository(clientRepository)
+    if (!dataSource.isInitialized && dataSource.initialize) {
+        await dataSource.initialize()
+    }
+    const repository = dataSource.getRepository(ClientModel)
+    return new TypeOrmCreateClientRepository(repository)
 }

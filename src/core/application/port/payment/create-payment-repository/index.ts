@@ -1,4 +1,4 @@
-import { Payment } from "../../../../../core/domain/payment"
+import { Payment } from "../../../../../core/domain/payment/payment"
 import { BaseEntity } from "../../../../domain/base-entity"
 
 export interface CreatePaymentRepository {

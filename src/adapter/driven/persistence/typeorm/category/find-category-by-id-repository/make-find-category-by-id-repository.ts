@@ -3,7 +3,9 @@ import { FindCategoryByIdTypeORMRepository } from "./find-category-by-id-reposit
 import dataSource from "../../"
 
 export const makeFindCategoryByIdRepository = async () => {
-    await dataSource.initialize()
+    if (!dataSource.isInitialized) {
+        await dataSource.initialize()
+    }
     const categoryRepository = dataSource.getRepository(CategoryModel)
     return new FindCategoryByIdTypeORMRepository(categoryRepository)
 }

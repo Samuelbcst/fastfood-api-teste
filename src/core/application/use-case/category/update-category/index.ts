@@ -1,4 +1,4 @@
-import { Category } from "../../../../domain/category"
+import { Category } from "../../../../domain/category/category"
 import { UpdateCategoryRepository } from "../../../port/category/update-category-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
