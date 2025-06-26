@@ -29,7 +29,6 @@ This project is a backend system for a fast-food self-service kiosk, designed to
 
 ## 📝 Event Storming & DDD
 
-- [ ] Add Event Storming diagrams for:
   - Order and payment flow
   - Preparation and delivery flow
 
