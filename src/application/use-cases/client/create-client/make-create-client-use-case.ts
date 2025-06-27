@@ -1,5 +1,5 @@
 import { CreateClientUseCase } from "."
-import { CreateClientRepository } from "../../../ports/client/create-client-repository"
+import { CreateClientRepository } from "../../../repositories/client/create-client-repository"
 
 export const makeCreateClientUseCase = (
     repository: CreateClientRepository

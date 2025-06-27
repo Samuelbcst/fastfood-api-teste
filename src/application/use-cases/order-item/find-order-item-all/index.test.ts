@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { FindOrderItemAllUseCase } from "."
-import type { FindOrderItemAllRepository } from "../../../ports/order-item/find-order-item-all-repository"
+import type { FindOrderItemAllRepository } from "../../../repositories/order-item/find-order-item-all-repository"
 
 describe("FindOrderItemAllUseCase", () => {
     let repository: FindOrderItemAllRepository

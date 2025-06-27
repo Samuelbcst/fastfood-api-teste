@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { FindOrderItemByIdUseCase } from "."
-import type { FindOrderItemByIdRepository } from "../../../ports/order-item/find-order-item-by-id-repository"
+import type { FindOrderItemByIdRepository } from "../../../repositories/order-item/find-order-item-by-id-repository"
 import { CustomError } from "../../custom-error"
 
 describe("FindOrderItemByIdUseCase", () => {

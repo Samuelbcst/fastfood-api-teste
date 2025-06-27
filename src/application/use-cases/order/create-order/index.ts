@@ -1,6 +1,6 @@
 import { BaseEntity } from "../../../../domain/entities/base-entity"
 import { Order } from "../../../../domain/entities/order/order"
-import { CreateOrderRepository } from "../../../ports/order/create-order-repository"
+import { CreateOrderRepository } from "../../../repositories/order/create-order-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

@@ -1,5 +1,5 @@
 import { Client } from "../../../../domain/entities/client/client"
-import { UpdateClientRepository } from "../../../ports/client/update-client-repository"
+import { UpdateClientRepository } from "../../../repositories/client/update-client-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

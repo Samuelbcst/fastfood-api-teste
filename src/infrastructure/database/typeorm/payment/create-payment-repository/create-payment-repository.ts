@@ -1,5 +1,5 @@
 import { Repository } from "typeorm/repository/Repository"
-import { CreatePaymentRepository } from "../../../../../application/ports/payment/create-payment-repository"
+import { CreatePaymentRepository } from "../../../../../application/repositories/payment/create-payment-repository"
 import { BaseEntity } from "../../../../../domain/entities/base-entity"
 import { Payment } from "../../../../../domain/entities/payment/payment"
 import { PaymentModel } from "../model"

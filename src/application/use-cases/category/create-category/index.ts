@@ -1,6 +1,6 @@
 import { BaseEntity } from "../../../../domain/entities/base-entity"
 import { Category } from "../../../../domain/entities/category/category"
-import { CreateCategoryRepository } from "../../../ports/category/create-category-repository"
+import { CreateCategoryRepository } from "../../../repositories/category/create-category-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

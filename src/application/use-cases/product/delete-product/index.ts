@@ -1,7 +1,7 @@
 import { Product } from "../../../../domain/entities/product/product"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { DeleteProductRepository } from "../../../ports/product/delete-product-repository"
+import { DeleteProductRepository } from "../../../repositories/product/delete-product-repository"
 
 interface Input {
     id: number

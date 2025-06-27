@@ -1,7 +1,7 @@
 import { Category } from "../../../../domain/entities/category/category"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { DeleteCategoryRepository } from "../../../ports/category/delete-category-repository"
+import { DeleteCategoryRepository } from "../../../repositories/category/delete-category-repository"
 
 interface Input {
     id: number

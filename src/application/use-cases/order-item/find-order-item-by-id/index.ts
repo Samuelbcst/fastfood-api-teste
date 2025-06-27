@@ -1,5 +1,5 @@
 import { OrderItem } from "../../../../domain/entities/order-item/order-item"
-import { FindOrderItemByIdRepository } from "../../../ports/order-item/find-order-item-by-id-repository"
+import { FindOrderItemByIdRepository } from "../../../repositories/order-item/find-order-item-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

@@ -1,5 +1,5 @@
 import { Product } from "../../../../domain/entities/product/product"
-import { UpdateProductRepository } from "../../../ports/product/update-product-repository"
+import { UpdateProductRepository } from "../../../repositories/product/update-product-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

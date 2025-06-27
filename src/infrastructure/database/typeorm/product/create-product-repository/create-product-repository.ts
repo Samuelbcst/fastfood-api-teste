@@ -1,5 +1,5 @@
 import { Repository } from "typeorm/repository/Repository"
-import { CreateProductRepository } from "../../../../../application/ports/product/create-product-repository"
+import { CreateProductRepository } from "../../../../../application/repositories/product/create-product-repository"
 import { BaseEntity } from "../../../../../domain/entities/base-entity"
 import { Product } from "../../../../../domain/entities/product/product"
 import { ProductModel } from "../model"

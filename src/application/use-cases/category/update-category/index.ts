@@ -1,5 +1,5 @@
 import { Category } from "../../../../domain/entities/category/category"
-import { UpdateCategoryRepository } from "../../../ports/category/update-category-repository"
+import { UpdateCategoryRepository } from "../../../repositories/category/update-category-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

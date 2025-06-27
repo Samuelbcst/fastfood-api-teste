@@ -1,7 +1,7 @@
 import { Order } from '../../../../domain/entities/order/order';
 import { UseCase } from '../../base-use-case';
 import { CustomError } from '../../custom-error';
-import { UpdateOrderStatusRepository } from '../../../ports/order/update-order-status-repository';
+import { UpdateOrderStatusRepository } from '../../../repositories/order/update-order-status-repository';
 
 export interface UpdateOrderStatusInput {
   id: number;

@@ -1,5 +1,5 @@
 import { Repository } from "typeorm/repository/Repository"
-import { CreateClientRepository } from "../../../../../application/ports/client/create-client-repository"
+import { CreateClientRepository } from "../../../../../application/repositories/client/create-client-repository"
 import { BaseEntity } from "../../../../../domain/entities/base-entity"
 import { Client } from "../../../../../domain/entities/client/client"
 import { ClientModel } from "../model"

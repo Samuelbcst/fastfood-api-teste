@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { FindOrderByClientUseCase } from "."
-import type { FindOrderByClientRepository } from "../../../ports/order/find-order-by-client-repository"
+import type { FindOrderByClientRepository } from "../../../repositories/order/find-order-by-client-repository"
 import { CustomError } from "../../custom-error"
 import { OrderStatus } from "../../../../domain/entities/order/order"
 

@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { UpdateOrderStatusRepository } from "../../../../../application/ports/order/update-order-status-repository";
+import { UpdateOrderStatusRepository } from "../../../../../application/repositories/order/update-order-status-repository";
 import { Order } from "../../../../../domain/entities/order/order";
 import { OrderModel } from "../model";
 

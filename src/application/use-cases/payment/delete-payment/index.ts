@@ -1,7 +1,7 @@
 import { Payment } from "../../../../domain/entities/payment/payment"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { DeletePaymentRepository } from "../../../ports/payment/delete-payment-repository"
+import { DeletePaymentRepository } from "../../../repositories/payment/delete-payment-repository"
 
 interface Input {
     id: number

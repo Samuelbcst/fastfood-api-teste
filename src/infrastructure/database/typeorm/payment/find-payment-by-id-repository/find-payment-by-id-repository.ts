@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Payment } from "../../../../../domain/entities/payment/payment"
 import { PaymentModel } from "../model"
-import { FindPaymentByIdRepository } from "../../../../../application/ports/payment/find-payment-by-id-repository"
+import { FindPaymentByIdRepository } from "../../../../../application/repositories/payment/find-payment-by-id-repository"
 
 export class FindPaymentByIdTypeORMRepository implements FindPaymentByIdRepository {
     constructor(private ormRepo: Repository<PaymentModel>) {}

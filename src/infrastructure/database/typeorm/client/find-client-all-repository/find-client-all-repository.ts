@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Client } from "../../../../../domain/entities/client/client"
 import { ClientModel } from "../model"
-import { FindClientAllRepository } from "../../../../../application/ports/client/find-client-all-repository"
+import { FindClientAllRepository } from "../../../../../application/repositories/client/find-client-all-repository"
 
 export class FindClientAllTypeORMRepository
     implements FindClientAllRepository

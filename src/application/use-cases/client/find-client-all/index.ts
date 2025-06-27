@@ -1,4 +1,4 @@
-import { FindClientAllRepository } from "../../../ports/client/find-client-all-repository"
+import { FindClientAllRepository } from "../../../repositories/client/find-client-all-repository"
 import { Client } from "../../../../domain/entities/client/client"
 import { UseCase } from "../../base-use-case"
 

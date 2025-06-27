@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { DeleteClientUseCase } from "."
-import type { DeleteClientRepository } from "../../../ports/client/delete-client-repository"
+import type { DeleteClientRepository } from "../../../repositories/client/delete-client-repository"
 import { CustomError } from "../../custom-error"
 
 describe("DeleteClientUseCase", () => {

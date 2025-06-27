@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { UpdateCategoryUseCase } from "."
-import type { UpdateCategoryRepository } from "../../../ports/category/update-category-repository"
+import type { UpdateCategoryRepository } from "../../../repositories/category/update-category-repository"
 import { CustomError } from "../../custom-error"
 
 const input = { id: 1, name: "Test Category", description: "desc" }

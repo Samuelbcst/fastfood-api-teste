@@ -1,4 +1,4 @@
-import { FindClientAllRepository } from "../../../ports/client/find-client-all-repository"
+import { FindClientAllRepository } from "../../../repositories/client/find-client-all-repository"
 import { FindClientAllUseCase } from "."
 
 export const makeFindClientAllUseCase = (

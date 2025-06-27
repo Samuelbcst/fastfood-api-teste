@@ -1,5 +1,5 @@
 import { FindClientByIdUseCase } from "."
-import { FindClientByIdRepository } from "../../../ports/client/find-client-by-id-repository"
+import { FindClientByIdRepository } from "../../../repositories/client/find-client-by-id-repository"
 
 export const makeFindClientByIdUseCase = (
     repository: FindClientByIdRepository

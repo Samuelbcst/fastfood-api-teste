@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Category } from "../../../../../domain/entities/category/category"
 import { CategoryModel } from "../model"
-import { UpdateCategoryRepository } from "../../../../../application/ports/category/update-category-repository"
+import { UpdateCategoryRepository } from "../../../../../application/repositories/category/update-category-repository"
 
 export class UpdateCategoryTypeORMRepository
     implements UpdateCategoryRepository

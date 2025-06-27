@@ -1,4 +1,4 @@
-import { FindProductAllRepository } from "../../../ports/product/find-product-all-repository"
+import { FindProductAllRepository } from "../../../repositories/product/find-product-all-repository"
 import { Product } from "../../../../domain/entities/product/product"
 import { UseCase } from "../../base-use-case"
 

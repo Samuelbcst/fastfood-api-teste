@@ -1,5 +1,5 @@
 import { CreateOrderItemUseCase } from "."
-import { CreateOrderItemRepository } from "../../../ports/order-item/create-order-item-repository"
+import { CreateOrderItemRepository } from "../../../repositories/order-item/create-order-item-repository"
 
 export const makeCreateOrderItemUseCase = (
     repository: CreateOrderItemRepository

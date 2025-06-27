@@ -1,4 +1,4 @@
-import { FindProductByCategoryRepository } from "../../../ports/product/find-product-by-category-repository"
+import { FindProductByCategoryRepository } from "../../../repositories/product/find-product-by-category-repository"
 import { Product } from "../../../../domain/entities/product/product"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"

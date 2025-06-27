@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Client } from "../../../../../domain/entities/client/client"
 import { ClientModel } from "../model"
-import { FindClientByCpfRepository } from "../../../../../application/ports/client/find-client-by-cpf-repository"
+import { FindClientByCpfRepository } from "../../../../../application/repositories/client/find-client-by-cpf-repository"
 
 export class FindClientByCpfTypeORMRepository implements FindClientByCpfRepository {
     constructor(private readonly repository: Repository<ClientModel>) {}

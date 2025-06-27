@@ -1,7 +1,7 @@
 import { Order } from "../../../../domain/entities/order/order"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { DeleteOrderRepository } from "../../../ports/order/delete-order-repository"
+import { DeleteOrderRepository } from "../../../repositories/order/delete-order-repository"
 
 interface Input {
     id: number

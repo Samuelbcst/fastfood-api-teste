@@ -1,9 +1,9 @@
 import { BaseEntity } from "../../../../domain/entities/base-entity"
 import { Payment, PaymentStatus } from "../../../../domain/entities/payment/payment"
-import { CreatePaymentRepository } from "../../../ports/payment/create-payment-repository"
+import { CreatePaymentRepository } from "../../../repositories/payment/create-payment-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { FindOrderByIdRepository } from '../../../ports/order/find-order-by-id-repository'
+import { FindOrderByIdRepository } from '../../../repositories/order/find-order-by-id-repository'
 
 
 type CreatePaymentInput = Omit<Payment, keyof BaseEntity>

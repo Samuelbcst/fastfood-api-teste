@@ -1,5 +1,5 @@
 import { UpdateOrderItemUseCase } from "."
-import { UpdateOrderItemRepository } from "../../../ports/order-item/update-order-item-repository"
+import { UpdateOrderItemRepository } from "../../../repositories/order-item/update-order-item-repository"
 
 export const makeUpdateOrderItemUseCase = (
     repository: UpdateOrderItemRepository

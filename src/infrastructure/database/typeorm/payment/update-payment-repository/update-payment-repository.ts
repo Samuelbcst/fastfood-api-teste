@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Payment } from "../../../../../domain/entities/payment/payment"
 import { PaymentModel } from "../model"
-import { UpdatePaymentRepository as IUpdatePaymentRepository } from "../../../../../application/ports/payment/update-payment-repository/index"
+import { UpdatePaymentRepository as IUpdatePaymentRepository } from "../../../../../application/repositories/payment/update-payment-repository/index"
 
 export class UpdatePaymentTypeORMRepository implements IUpdatePaymentRepository {
     constructor(private readonly repository: Repository<PaymentModel>) {}

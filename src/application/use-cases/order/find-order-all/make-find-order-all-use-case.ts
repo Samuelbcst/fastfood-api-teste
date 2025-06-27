@@ -1,5 +1,5 @@
 import { FindOrderAllUseCase } from "."
-import { FindOrderAllRepository } from "../../../ports/order/find-order-all-repository"
+import { FindOrderAllRepository } from "../../../repositories/order/find-order-all-repository"
 
 export const makeFindOrderAllUseCase = (
     repository: FindOrderAllRepository

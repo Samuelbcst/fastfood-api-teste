@@ -1,6 +1,6 @@
 import { BaseEntity } from "../../../../domain/entities/base-entity"
 import { Client } from "../../../../domain/entities/client/client"
-import { CreateClientRepository } from "../../../ports/client/create-client-repository"
+import { CreateClientRepository } from "../../../repositories/client/create-client-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

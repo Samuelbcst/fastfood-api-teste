@@ -1,4 +1,4 @@
-import { FindOrderItemAllRepository } from "../../../ports/order-item/find-order-item-all-repository"
+import { FindOrderItemAllRepository } from "../../../repositories/order-item/find-order-item-all-repository"
 import { FindOrderItemAllUseCase } from "."
 
 export const makeFindOrderItemAllUseCase = (

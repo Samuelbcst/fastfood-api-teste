@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { CreateClientUseCase } from "."
-import type { CreateClientRepository } from "../../../ports/client/create-client-repository"
+import type { CreateClientRepository } from "../../../repositories/client/create-client-repository"
 import { CustomError } from "../../custom-error"
 
 describe("CreateClientUseCase", () => {

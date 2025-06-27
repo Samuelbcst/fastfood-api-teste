@@ -1,5 +1,5 @@
 import { Payment } from "../../../../domain/entities/payment/payment"
-import { FindPaymentByIdRepository } from "../../../ports/payment/find-payment-by-id-repository"
+import { FindPaymentByIdRepository } from "../../../repositories/payment/find-payment-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

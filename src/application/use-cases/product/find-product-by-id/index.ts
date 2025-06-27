@@ -1,5 +1,5 @@
 import { Product } from "../../../../domain/entities/product/product"
-import { FindProductByIdRepository } from "../../../ports/product/find-product-by-id-repository"
+import { FindProductByIdRepository } from "../../../repositories/product/find-product-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

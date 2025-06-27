@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Product } from "../../../../../domain/entities/product/product"
 import { ProductModel } from "../model"
-import { DeleteProductRepository } from "../../../../../application/ports/product/delete-product-repository"
+import { DeleteProductRepository } from "../../../../../application/repositories/product/delete-product-repository"
 
 export class DeleteProductTypeORMRepository implements DeleteProductRepository {
     constructor(private readonly repository: Repository<ProductModel>) {}

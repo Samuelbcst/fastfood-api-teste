@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Category } from "../../../../../domain/entities/category/category"
 import { CategoryModel } from "../model"
-import { DeleteCategoryRepository } from "../../../../../application/ports/category/delete-category-repository"
+import { DeleteCategoryRepository } from "../../../../../application/repositories/category/delete-category-repository"
 
 export class DeleteCategoryTypeORMRepository implements DeleteCategoryRepository {
     constructor(private readonly repository: Repository<CategoryModel>) {}

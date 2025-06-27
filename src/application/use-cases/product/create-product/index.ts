@@ -1,6 +1,6 @@
 import { BaseEntity } from "../../../../domain/entities/base-entity"
 import { Product } from "../../../../domain/entities/product/product"
-import { CreateProductRepository } from "../../../ports/product/create-product-repository"
+import { CreateProductRepository } from "../../../repositories/product/create-product-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

@@ -1,5 +1,5 @@
 import { DeleteProductUseCase } from "."
-import { DeleteProductRepository } from "../../../ports/product/delete-product-repository"
+import { DeleteProductRepository } from "../../../repositories/product/delete-product-repository"
 
 export const makeDeleteProductUseCase = (
     repository: DeleteProductRepository

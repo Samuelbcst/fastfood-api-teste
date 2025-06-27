@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Payment } from "../../../../../domain/entities/payment/payment"
 import { PaymentModel } from "../model"
-import { DeletePaymentRepository } from "../../../../../application/ports/payment/delete-payment-repository"
+import { DeletePaymentRepository } from "../../../../../application/repositories/payment/delete-payment-repository"
 
 export class DeletePaymentTypeORMRepository implements DeletePaymentRepository {
     constructor(private readonly repository: Repository<PaymentModel>) {}

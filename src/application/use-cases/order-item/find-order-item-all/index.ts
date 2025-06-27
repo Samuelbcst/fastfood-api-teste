@@ -1,4 +1,4 @@
-import { FindOrderItemAllRepository } from "../../../ports/order-item/find-order-item-all-repository"
+import { FindOrderItemAllRepository } from "../../../repositories/order-item/find-order-item-all-repository"
 import { OrderItem } from "../../../../domain/entities/order-item/order-item"
 import { UseCase } from "../../base-use-case"
 

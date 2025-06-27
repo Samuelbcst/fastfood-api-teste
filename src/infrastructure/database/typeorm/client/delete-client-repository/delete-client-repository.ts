@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Client } from "../../../../../domain/entities/client/client"
 import { ClientModel } from "../model"
-import { DeleteClientRepository } from "../../../../../application/ports/client/delete-client-repository"
+import { DeleteClientRepository } from "../../../../../application/repositories/client/delete-client-repository"
 
 export class DeleteClientTypeORMRepository implements DeleteClientRepository {
     constructor(private readonly repository: Repository<ClientModel>) {}

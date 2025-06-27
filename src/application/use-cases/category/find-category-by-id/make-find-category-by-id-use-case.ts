@@ -1,5 +1,5 @@
 import { FindCategoryByIdUseCase } from "."
-import { FindCategoryByIdRepository } from "../../../ports/category/find-category-by-id-repository"
+import { FindCategoryByIdRepository } from "../../../repositories/category/find-category-by-id-repository"
 
 export const makeFindCategoryByIdUseCase = (
     repository: FindCategoryByIdRepository

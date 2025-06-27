@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Product } from "../../../../../domain/entities/product/product"
 import { ProductModel } from "../model"
-import { FindProductByCategoryRepository } from "../../../../../application/ports/product/find-product-by-category-repository"
+import { FindProductByCategoryRepository } from "../../../../../application/repositories/product/find-product-by-category-repository"
 
 
 export class FindProductByCategoryTypeORMRepository implements FindProductByCategoryRepository {

@@ -1,4 +1,4 @@
-import { FindPaymentAllRepository } from "../../../ports/payment/find-payment-all-repository"
+import { FindPaymentAllRepository } from "../../../repositories/payment/find-payment-all-repository"
 import { Payment } from "../../../../domain/entities/payment/payment"
 import { UseCase } from "../../base-use-case"
 

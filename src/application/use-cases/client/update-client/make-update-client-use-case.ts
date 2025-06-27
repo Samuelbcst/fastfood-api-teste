@@ -1,5 +1,5 @@
 import { UpdateClientUseCase } from "."
-import { UpdateClientRepository } from "../../../ports/client/update-client-repository"
+import { UpdateClientRepository } from "../../../repositories/client/update-client-repository"
 
 export const makeUpdateClientUseCase = (
     repository: UpdateClientRepository

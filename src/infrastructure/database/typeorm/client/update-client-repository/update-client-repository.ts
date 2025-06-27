@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Client } from "../../../../../domain/entities/client/client"
 import { ClientModel } from "../model"
-import { UpdateClientRepository } from "../../../../../application/ports/client/update-client-repository"
+import { UpdateClientRepository } from "../../../../../application/repositories/client/update-client-repository"
 
 export class UpdateClientTypeORMRepository
     implements UpdateClientRepository

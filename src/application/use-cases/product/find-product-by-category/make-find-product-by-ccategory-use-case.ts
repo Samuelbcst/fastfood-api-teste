@@ -1,5 +1,5 @@
 import { FindProductByCategoryUseCase } from "."
-import { FindProductByCategoryRepository } from "../../../ports/product/find-product-by-category-repository"
+import { FindProductByCategoryRepository } from "../../../repositories/product/find-product-by-category-repository"
 
 export const makeFindProductByCategoryUseCase = (
     repository: FindProductByCategoryRepository

@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { UpdateOrderItemUseCase } from "."
-import type { UpdateOrderItemRepository } from "../../../ports/order-item/update-order-item-repository"
+import type { UpdateOrderItemRepository } from "../../../repositories/order-item/update-order-item-repository"
 import { CustomError } from "../../custom-error"
 
 describe("UpdateOrderItemUseCase", () => {

@@ -1,5 +1,5 @@
 import { DeletePaymentUseCase } from "."
-import { DeletePaymentRepository } from "../../../ports/payment/delete-payment-repository"
+import { DeletePaymentRepository } from "../../../repositories/payment/delete-payment-repository"
 
 export const makeDeletePaymentUseCase = (
     repository: DeletePaymentRepository

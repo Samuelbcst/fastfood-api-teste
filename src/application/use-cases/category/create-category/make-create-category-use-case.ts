@@ -1,5 +1,5 @@
 import { CreateCategoryUseCase } from "."
-import { CreateCategoryRepository } from "../../../ports/category/create-category-repository"
+import { CreateCategoryRepository } from "../../../repositories/category/create-category-repository"
 
 export const makeCreateCategoryUseCase = (
     repository: CreateCategoryRepository

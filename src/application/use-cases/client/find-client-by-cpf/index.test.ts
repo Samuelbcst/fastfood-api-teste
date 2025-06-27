@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { FindClientByCpfUseCase } from "."
-import type { FindClientByCpfRepository } from "../../../ports/client/find-client-by-cpf-repository"
+import type { FindClientByCpfRepository } from "../../../repositories/client/find-client-by-cpf-repository"
 import { CustomError } from "../../custom-error"
 
 describe("FindClientByCpfUseCase", () => {

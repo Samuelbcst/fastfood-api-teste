@@ -1,5 +1,5 @@
 import { Category } from "../../../../domain/entities/category/category"
-import { FindCategoryByIdRepository } from "../../../ports/category/find-category-by-id-repository"
+import { FindCategoryByIdRepository } from "../../../repositories/category/find-category-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

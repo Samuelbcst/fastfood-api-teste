@@ -1,4 +1,4 @@
-import { FindOrderByIdRepository } from '../../../ports/order/find-order-by-id-repository'
+import { FindOrderByIdRepository } from '../../../repositories/order/find-order-by-id-repository'
 import { Order } from '../../../../domain/entities/order/order'
 import { UseCase } from '../../base-use-case'
 import { CustomError } from '../../custom-error'

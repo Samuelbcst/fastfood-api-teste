@@ -1,7 +1,7 @@
 import { Client } from "../../../../domain/entities/client/client"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
-import { DeleteClientRepository } from "../../../ports/client/delete-client-repository"
+import { DeleteClientRepository } from "../../../repositories/client/delete-client-repository"
 
 interface Input {
     id: number

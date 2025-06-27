@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Category } from "../../../../../domain/entities/category/category"
 import { CategoryModel } from "../model"
-import { FindCategoryAllRepository } from "../../../../../application/ports/category/find-category-all-repository"
+import { FindCategoryAllRepository } from "../../../../../application/repositories/category/find-category-all-repository"
 
 export class FindCategoryAllTypeORMRepository
     implements FindCategoryAllRepository

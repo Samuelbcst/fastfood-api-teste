@@ -1,5 +1,5 @@
 import { DeleteCategoryUseCase } from "."
-import { DeleteCategoryRepository } from "../../../ports/category/delete-category-repository"
+import { DeleteCategoryRepository } from "../../../repositories/category/delete-category-repository"
 
 export const makeDeleteCategoryUseCase = (
     repository: DeleteCategoryRepository

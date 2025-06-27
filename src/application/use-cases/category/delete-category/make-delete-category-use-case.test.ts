@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest"
 import { makeDeleteCategoryUseCase } from "./make-delete-category-use-case"
-import type { DeleteCategoryRepository } from "../../../ports/category/delete-category-repository"
+import type { DeleteCategoryRepository } from "../../../repositories/category/delete-category-repository"
 
 describe("makeDeleteCategoryUseCase", () => {
     it("should create a DeleteCategoryUseCase instance with the provided repository", () => {

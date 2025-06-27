@@ -1,5 +1,5 @@
 import { OrderItem } from "../../../../domain/entities/order-item/order-item"
-import { UpdateOrderItemRepository } from "../../../ports/order-item/update-order-item-repository"
+import { UpdateOrderItemRepository } from "../../../repositories/order-item/update-order-item-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

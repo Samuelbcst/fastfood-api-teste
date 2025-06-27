@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest"
 import { makeFindCategoryByIdUseCase } from "./make-find-category-by-id-use-case"
-import type { FindCategoryByIdRepository } from "../../../ports/category/find-category-by-id-repository"
+import type { FindCategoryByIdRepository } from "../../../repositories/category/find-category-by-id-repository"
 
 describe("makeFindCategoryByIdUseCase", () => {
     it("should create a FindCategoryByIdUseCase instance with the provided repository", () => {

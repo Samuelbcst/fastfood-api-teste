@@ -1,4 +1,4 @@
-import { FindCategoryAllRepository } from "../../../ports/category/find-category-all-repository"
+import { FindCategoryAllRepository } from "../../../repositories/category/find-category-all-repository"
 import { Category } from "../../../../domain/entities/category/category"
 import { UseCase } from "../../base-use-case"
 

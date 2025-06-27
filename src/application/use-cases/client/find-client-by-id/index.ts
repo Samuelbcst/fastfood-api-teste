@@ -1,5 +1,5 @@
 import { Client } from "../../../../domain/entities/client/client"
-import { FindClientByIdRepository } from "../../../ports/client/find-client-by-id-repository"
+import { FindClientByIdRepository } from "../../../repositories/client/find-client-by-id-repository"
 import { UseCase } from "../../base-use-case"
 import { CustomError } from "../../custom-error"
 

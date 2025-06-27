@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from "vitest"
 import { makeUpdateCategoryUseCase } from "./make-update-category-use-case"
-import type { UpdateCategoryRepository } from "../../../ports/category/update-category-repository"
+import type { UpdateCategoryRepository } from "../../../repositories/category/update-category-repository"
 
 describe("makeUpdateCategoryUseCase", () => {
     it("should create an UpdateCategoryUseCase instance with the provided repository", () => {

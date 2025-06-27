@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from "vitest"
 import { FindClientByIdUseCase } from "."
-import type { FindClientByIdRepository } from "../../../ports/client/find-client-by-id-repository"
+import type { FindClientByIdRepository } from "../../../repositories/client/find-client-by-id-repository"
 import { CustomError } from "../../custom-error"
 
 describe("FindClientByIdUseCase", () => {

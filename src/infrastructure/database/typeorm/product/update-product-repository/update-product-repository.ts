@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Product } from "../../../../../domain/entities/product/product"
 import { ProductModel } from "../model"
-import { UpdateProductRepository } from "../../../../../application/ports/product/update-product-repository"
+import { UpdateProductRepository } from "../../../../../application/repositories/product/update-product-repository"
 
 export class UpdateProductTypeORMRepository
     implements UpdateProductRepository

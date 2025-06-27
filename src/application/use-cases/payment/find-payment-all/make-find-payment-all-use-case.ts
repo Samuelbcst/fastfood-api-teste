@@ -1,4 +1,4 @@
-import { FindPaymentAllRepository } from "../../../ports/payment/find-payment-all-repository"
+import { FindPaymentAllRepository } from "../../../repositories/payment/find-payment-all-repository"
 import { FindPaymentAllUseCase } from "."
 
 export const makeFindPaymentAllUseCase = (

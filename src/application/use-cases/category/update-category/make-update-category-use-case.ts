@@ -1,5 +1,5 @@
 import { UpdateCategoryUseCase } from "."
-import { UpdateCategoryRepository } from "../../../ports/category/update-category-repository"
+import { UpdateCategoryRepository } from "../../../repositories/category/update-category-repository"
 
 export const makeUpdateCategoryUseCase = (
     repository: UpdateCategoryRepository

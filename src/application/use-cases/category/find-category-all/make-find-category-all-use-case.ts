@@ -1,4 +1,4 @@
-import { FindCategoryAllRepository } from "../../../ports/category/find-category-all-repository"
+import { FindCategoryAllRepository } from "../../../repositories/category/find-category-all-repository"
 import { FindCategoryAllUseCase } from "."
 
 export const makeFindCategoryAllUseCase = (

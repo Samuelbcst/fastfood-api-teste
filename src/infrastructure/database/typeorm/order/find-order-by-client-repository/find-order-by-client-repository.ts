@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Order } from "../../../../../domain/entities/order/order"
 import { OrderModel } from "../model"
-import { FindOrderByClientRepository } from "../../../../../application/ports/order/find-order-by-client-repository"
+import { FindOrderByClientRepository } from "../../../../../application/repositories/order/find-order-by-client-repository"
 
 export class FindOrderByClientTypeORMRepository implements FindOrderByClientRepository {
     constructor(private readonly repository: Repository<OrderModel>) {}

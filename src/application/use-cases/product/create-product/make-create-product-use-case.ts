@@ -1,5 +1,5 @@
 import { CreateProductUseCase } from "."
-import { CreateProductRepository } from "../../../ports/product/create-product-repository"
+import { CreateProductRepository } from "../../../repositories/product/create-product-repository"
 
 export const makeCreateProductUseCase = (
     repository: CreateProductRepository

@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Payment } from "../../../../../domain/entities/payment/payment"
 import { PaymentModel } from "../model"
-import { FindPaymentAllRepository } from "../../../../../application/ports/payment/find-payment-all-repository"
+import { FindPaymentAllRepository } from "../../../../../application/repositories/payment/find-payment-all-repository"
 
 export class FindPaymentAllTypeORMRepository
     implements FindPaymentAllRepository

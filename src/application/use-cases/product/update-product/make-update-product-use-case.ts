@@ -1,5 +1,5 @@
 import { UpdateProductUseCase } from "."
-import { UpdateProductRepository } from "../../../ports/product/update-product-repository"
+import { UpdateProductRepository } from "../../../repositories/product/update-product-repository"
 
 export const makeUpdateProductUseCase = (
     repository: UpdateProductRepository

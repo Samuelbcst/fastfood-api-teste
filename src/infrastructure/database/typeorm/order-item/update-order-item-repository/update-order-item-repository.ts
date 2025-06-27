@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { OrderItem } from "../../../../../domain/entities/order-item/order-item"
 import { OrderItemModel } from "../model"
-import { UpdateOrderItemRepository } from "../../../../../application/ports/order-item/update-order-item-repository"
+import { UpdateOrderItemRepository } from "../../../../../application/repositories/order-item/update-order-item-repository"
 
 export class UpdateOrderItemTypeORMRepository implements UpdateOrderItemRepository {
     constructor(private readonly repository: Repository<OrderItemModel>) {}

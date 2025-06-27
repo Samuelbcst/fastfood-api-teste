@@ -1,5 +1,5 @@
 import { DeleteClientUseCase } from "."
-import { DeleteClientRepository } from "../../../ports/client/delete-client-repository"
+import { DeleteClientRepository } from "../../../repositories/client/delete-client-repository"
 
 export const makeDeleteClientUseCase = (
     repository: DeleteClientRepository

@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { Category } from "../../../../../domain/entities/category/category"
 import { CategoryModel } from "../model"
-import { FindCategoryByIdRepository } from "../../../../../application/ports/category/find-category-by-id-repository"
+import { FindCategoryByIdRepository } from "../../../../../application/repositories/category/find-category-by-id-repository"
 
 export class FindCategoryByIdTypeORMRepository
     implements FindCategoryByIdRepository

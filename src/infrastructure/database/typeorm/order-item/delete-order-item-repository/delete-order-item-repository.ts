@@ -1,7 +1,7 @@
 import { Repository } from "typeorm"
 import { OrderItem } from "../../../../../domain/entities/order-item/order-item"
 import { OrderItemModel } from "../model"
-import { DeleteOrderItemRepository } from "../../../../../application/ports/order-item/delete-order-item-repository"
+import { DeleteOrderItemRepository } from "../../../../../application/repositories/order-item/delete-order-item-repository"
 
 export class DeleteOrderItemTypeORMRepository implements DeleteOrderItemRepository {
     constructor(private readonly repository: Repository<OrderItemModel>) {}
