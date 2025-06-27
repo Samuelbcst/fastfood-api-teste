@@ -47,8 +47,8 @@ This project is a backend system for a fast-food self-service kiosk, designed to
 yarn compose
 ```
 
-- The API will be available at `http://localhost:3000`
-- Swagger UI: `http://localhost:3000/swagger`
+- The API will be available at `http://localhost:3000/api/v1`
+- Swagger UI: `http://localhost:3000/api-docs/`
 
 ### Environment Variables
 
